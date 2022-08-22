@@ -14,6 +14,8 @@ current thoughts and feeling, and you cna also share your thoughts and feelings 
 
 Click on the picture to watch the demo video on YouTube!
 
+https://youtu.be/EhK-77EVjro
+
 [![Demo](assets/video_cover.png)](https://youtu.be/EhK-77EVjro)
 
 ## Future Tasks :bomb:
