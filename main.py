@@ -15,21 +15,28 @@ window = tkdnd.Tk()
 
 
 # Events
-IDLE = []
-for i in range(1, 3):
-    img = Image.open(SPRITE_PATH + "\\stand{}.png".format(i)).resize((WIDTH, HEIGHT))
-    image = ImageTk.PhotoImage(img)
-    IDLE.append(image)
-
-JUMP = []
+IDLE_RIGHT = []
 for i in range(1, 5):
-    img = Image.open(SPRITE_PATH + "\\jump_face_left_{}.png".format(i)).resize((WIDTH, HEIGHT))
+    img = Image.open(SPRITE_PATH + "\\idle_right_{}.png".format(i)).resize((WIDTH, HEIGHT))
     image = ImageTk.PhotoImage(img)
-    JUMP.append(image)
+    IDLE_RIGHT.append(image)
+
+IDLE_LEFT = []
+for i in range(1, 5):
+    img = Image.open(SPRITE_PATH + "\\idle_right_{}.png".format(i)).resize((WIDTH, HEIGHT))
+    img = img.transpose(method=Image.FLIP_LEFT_RIGHT)
+    image = ImageTk.PhotoImage(img)
+    IDLE_LEFT.append(image)
+
+# JUMP = []
+# for i in range(1, 5):
+#     img = Image.open(SPRITE_PATH + "\\jump_face_left_{}.png".format(i)).resize((WIDTH, HEIGHT))
+#     image = ImageTk.PhotoImage(img)
+#     JUMP.append(image)
 
 
-EVENTS = [IDLE, JUMP]
-INTERVALS = [500, 100]
+EVENTS = [IDLE_RIGHT, IDLE_LEFT]
+INTERVALS = [500, 500]
 
 
 def update_animation(cycle, event_number, floater):

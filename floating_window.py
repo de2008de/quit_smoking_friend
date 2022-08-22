@@ -3,7 +3,8 @@ import tkinter as tk
 from animation import Animation
 
 
-BG_COLOR = "#ffffff"
+BG_COLOR = "#000000"
+
 
 class FloatingWindow(tk.Toplevel):
     def __init__(self, *args, **kwargs):
