@@ -15,6 +15,13 @@ You want to leave a short message with other poeple who are also trying to quit 
 You want to randomly see a message from other quitter
 
 
+## Sprites Diemention
+
+Need to be consistent with the dimention of each sprite.
+
+Use around 50:65
+
+
 ## References
 
 https://github.com/aphkyle/dpet
