@@ -1,4 +1,5 @@
 import tkinter as tk
+from data import DataManager
 
 
 class Menu(tk.Menu):
@@ -15,8 +16,10 @@ class Menu(tk.Menu):
         self.add_separator()
         self.add_command(label="Quit", command=quit)
 
+        self.data_manager = DataManager()
+
     def record_want_to_smoke_but_did_not(self):
-        pass
+        self.data_manager.record_hold_back_cigarette()
 
     def need_distraction(self):
         pass
