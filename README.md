@@ -1,4 +1,4 @@
-# Quit Smoking Friend
+# Quit Smoking Friend :sparkles: :tada:
 
 This is a desktop virtual friend that helps you quit smoking. You can track how many times you wanted to smoke,
 but you chose to hold back as well as how long have you been quit smoking. 
@@ -12,23 +12,25 @@ current thoughts and feeling, and you cna also share your thoughts and feelings 
 
 ## Demo Video
 
+Click on me to YouTube!
+
 [![Demo](assets/video_cover.png)](https://youtu.be/EhK-77EVjro)
 
 ## Future Tasks
 
-- Implement a server for users to communicate online (for the share thoughts feature)
-- Implement a user interface for users to input their thoughts
-- Implement a script to grab new jokes
-- Implement a report button for users to report jokes or other users' content
-- Implement an option for users to change the appearance of the virtual friend
+- :point_right: Implement a server for users to communicate online (for the share thoughts feature)
+- :point_right: Implement a user interface for users to input their thoughts
+- :point_right: Implement a script to grab new jokes
+- :point_right: Implement a report button for users to report jokes or other users' content
+- :point_right: Implement an option for users to change the appearance of the virtual friend
 
-## Asset Credit
+## Asset Credit :hearts:
 
 The sprites asset is obtained from:
 
 https://free-game-assets.itch.io/free-tiny-hero-sprites-pixel-art
 
-## References
+## References :art:
 
 https://github.com/aphkyle/dpet
 
