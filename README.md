@@ -14,6 +14,12 @@ You want to leave a short message with other poeple who are also trying to quit 
 
 You want to randomly see a message from other quitter
 
+## Asset Credit
+
+The sprites asset is obtained from:
+
+https://free-game-assets.itch.io/free-tiny-hero-sprites-pixel-art
+
 ## References
 
 https://github.com/aphkyle/dpet
