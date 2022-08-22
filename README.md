@@ -12,7 +12,7 @@ current thoughts and feeling, and you cna also share your thoughts and feelings 
 
 ## Demo Video :eye_speech_bubble:
 
-Click on me to YouTube!
+Click on the picture to watch the demo video on YouTube!
 
 [![Demo](assets/video_cover.png)](https://youtu.be/EhK-77EVjro)
 
