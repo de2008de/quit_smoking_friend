@@ -24,19 +24,26 @@ for i in range(1, 5):
 IDLE_LEFT = []
 for i in range(1, 5):
     img = Image.open(SPRITE_PATH + "\\idle_right_{}.png".format(i)).resize((WIDTH, HEIGHT))
-    img = img.transpose(method=Image.FLIP_LEFT_RIGHT)
+    img = img.transpose(method=Image.Transpose.FLIP_LEFT_RIGHT)
     image = ImageTk.PhotoImage(img)
     IDLE_LEFT.append(image)
 
-# JUMP = []
-# for i in range(1, 5):
-#     img = Image.open(SPRITE_PATH + "\\jump_face_left_{}.png".format(i)).resize((WIDTH, HEIGHT))
-#     image = ImageTk.PhotoImage(img)
-#     JUMP.append(image)
+JUMP_RIGHT = []
+for i in range(1, 9):
+    img = Image.open(SPRITE_PATH + "\\jump_right_{}.png".format(i)).resize((WIDTH, HEIGHT))
+    image = ImageTk.PhotoImage(img)
+    JUMP_RIGHT.append(image)
+
+JUMP_LEFT = []
+for i in range(1, 9):
+    img = Image.open(SPRITE_PATH + "\\jump_right_{}.png".format(i)).resize((WIDTH, HEIGHT))
+    img = img.transpose(method=Image.Transpose.FLIP_LEFT_RIGHT)
+    image = ImageTk.PhotoImage(img)
+    JUMP_LEFT.append(image)
 
 
-EVENTS = [IDLE_RIGHT, IDLE_LEFT]
-INTERVALS = [500, 500]
+EVENTS = [IDLE_RIGHT, IDLE_LEFT, JUMP_RIGHT, JUMP_LEFT]
+INTERVALS = [150, 150, 100, 100]
 
 
 def update_animation(cycle, event_number, floater):
