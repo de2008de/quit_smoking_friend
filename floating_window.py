@@ -2,6 +2,7 @@ import tkinter as tk
 
 from animation import Animation
 from menu import Menu
+from text_bubble import TextBubble
 
 
 BG_COLOR = "#000000"
@@ -13,9 +14,15 @@ class FloatingWindow(tk.Toplevel):
         self.overrideredirect(True)  # Remove the toolbar on the window
         self.wm_attributes("-topmost", True)  # Window always on top
         self.wm_attributes("-transparentcolor", BG_COLOR)  # Convert the given color to transparent
+        self.configure(bg=BG_COLOR)
+
+        self.text_bubble = TextBubble(self, bg=BG_COLOR)
+        self.text_bubble.grid(row=0, column=0)
+
         self.label = Animation(self, bg=BG_COLOR)
-        self.label.pack()
-        self.menu = Menu(self.label.update())
+        self.label.grid(row=1, column=0)
+
+        self.menu = Menu(self.label.update(), self.text_bubble)
 
         self.label.bind("<ButtonPress-1>", self.start_move)
         self.label.bind("<B1-Motion>", self.moving)

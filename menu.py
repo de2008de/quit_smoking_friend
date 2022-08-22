@@ -3,7 +3,7 @@ from data import DataManager
 
 
 class Menu(tk.Menu):
-    def __init__(self, event, *args, **kwargs):
+    def __init__(self, event, text_bubble, *args, **kwargs):
         super().__init__(*args, **kwargs, tearoff=False)
         self.fire_event = event
         self.add_command(label="Hold back a cigarette", command=self.record_want_to_smoke_but_did_not)
@@ -16,13 +16,15 @@ class Menu(tk.Menu):
         self.add_separator()
         self.add_command(label="Quit", command=quit)
 
+        self.text_bubble = text_bubble
         self.data_manager = DataManager()
 
     def record_want_to_smoke_but_did_not(self):
         self.data_manager.record_hold_back_cigarette()
 
     def need_distraction(self):
-        pass
+        joke = self.data_manager.random_joke()
+        self.text_bubble.show_text(joke)
 
     def see_other_current_thought(self):
         pass
