@@ -10,13 +10,13 @@ can tell you some jokes to help you distract your thought about smoking.
 Moreover, you can check other users'
 current thoughts and feeling, and you cna also share your thoughts and feelings with other users.
 
-## Demo Video
+## Demo Video :eye_speech_bubble:
 
 Click on me to YouTube!
 
 [![Demo](assets/video_cover.png)](https://youtu.be/EhK-77EVjro)
 
-## Future Tasks
+## Future Tasks :bomb:
 
 - :point_right: Implement a server for users to communicate online (for the share thoughts feature)
 - :point_right: Implement a user interface for users to input their thoughts
