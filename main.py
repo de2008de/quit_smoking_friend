@@ -16,34 +16,54 @@ window = tkdnd.Tk()
 
 # Events
 IDLE_RIGHT = []
-for i in range(1, 5):
-    img = Image.open(SPRITE_PATH + "\\idle_right_{}.png".format(i)).resize((WIDTH, HEIGHT))
-    image = ImageTk.PhotoImage(img)
-    IDLE_RIGHT.append(image)
+for j in range(2):
+    for i in range(1, 5):
+        img = Image.open(SPRITE_PATH + "\\idle_right_{}.png".format(i)).resize((WIDTH, HEIGHT))
+        image = ImageTk.PhotoImage(img)
+        IDLE_RIGHT.append(image)
 
 IDLE_LEFT = []
-for i in range(1, 5):
-    img = Image.open(SPRITE_PATH + "\\idle_right_{}.png".format(i)).resize((WIDTH, HEIGHT))
-    img = img.transpose(method=Image.Transpose.FLIP_LEFT_RIGHT)
-    image = ImageTk.PhotoImage(img)
-    IDLE_LEFT.append(image)
+for j in range(2):
+    for i in range(1, 5):
+        img = Image.open(SPRITE_PATH + "\\idle_right_{}.png".format(i)).resize((WIDTH, HEIGHT))
+        img = img.transpose(method=Image.Transpose.FLIP_LEFT_RIGHT)
+        image = ImageTk.PhotoImage(img)
+        IDLE_LEFT.append(image)
 
 JUMP_RIGHT = []
-for i in range(1, 9):
-    img = Image.open(SPRITE_PATH + "\\jump_right_{}.png".format(i)).resize((WIDTH, HEIGHT))
-    image = ImageTk.PhotoImage(img)
-    JUMP_RIGHT.append(image)
+for j in range(2):
+    for i in range(1, 9):
+        img = Image.open(SPRITE_PATH + "\\jump_right_{}.png".format(i)).resize((WIDTH, HEIGHT))
+        image = ImageTk.PhotoImage(img)
+        JUMP_RIGHT.append(image)
 
 JUMP_LEFT = []
-for i in range(1, 9):
-    img = Image.open(SPRITE_PATH + "\\jump_right_{}.png".format(i)).resize((WIDTH, HEIGHT))
-    img = img.transpose(method=Image.Transpose.FLIP_LEFT_RIGHT)
-    image = ImageTk.PhotoImage(img)
-    JUMP_LEFT.append(image)
+for j in range(2):
+    for i in range(1, 9):
+        img = Image.open(SPRITE_PATH + "\\jump_right_{}.png".format(i)).resize((WIDTH, HEIGHT))
+        img = img.transpose(method=Image.Transpose.FLIP_LEFT_RIGHT)
+        image = ImageTk.PhotoImage(img)
+        JUMP_LEFT.append(image)
+
+RUN_RIGHT = []
+for j in range(4):  # Run twice long
+    for i in range(1, 7):
+        img = Image.open(SPRITE_PATH + "\\run_right_{}.png".format(i)).resize((WIDTH, HEIGHT))
+        image = ImageTk.PhotoImage(img)
+        RUN_RIGHT.append(image)
+
+RUN_LEFT = []
+for j in range(4):  # Run twice long
+    for i in range(1, 7):
+        img = Image.open(SPRITE_PATH + "\\run_right_{}.png".format(i)).resize((WIDTH, HEIGHT))
+        img = img.transpose(method=Image.Transpose.FLIP_LEFT_RIGHT)
+        image = ImageTk.PhotoImage(img)
+        RUN_LEFT.append(image)
 
 
-EVENTS = [IDLE_RIGHT, IDLE_LEFT, JUMP_RIGHT, JUMP_LEFT]
-INTERVALS = [150, 150, 100, 100]
+EVENTS = [IDLE_RIGHT, IDLE_LEFT, JUMP_RIGHT, JUMP_LEFT, RUN_RIGHT, RUN_LEFT]
+EVENT_WEIGHTS = [500, 500, 100, 100, 100, 100]
+INTERVALS = [200, 200, 100, 100, 100, 100]
 
 
 def update_animation(cycle, event_number, floater):
@@ -59,7 +79,8 @@ def update_animation(cycle, event_number, floater):
 
 
 def get_random_event_number():
-    return random.randint(0, len(EVENTS) - 1)
+    event_number = [i for i in range(len(EVENTS))]
+    return random.choices(event_number, weights=EVENT_WEIGHTS, k=1)[0]
 
 
 def main():
