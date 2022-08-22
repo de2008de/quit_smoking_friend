@@ -20,6 +20,7 @@ class Menu(tk.Menu):
         self.data_manager = DataManager()
 
     def record_want_to_smoke_but_did_not(self):
+        self.text_bubble.show_text('Nice! Keep it up!')
         self.data_manager.record_hold_back_cigarette()
 
     def need_distraction(self):
@@ -27,7 +28,11 @@ class Menu(tk.Menu):
         self.text_bubble.show_text(joke)
 
     def see_other_current_thought(self):
-        pass
+        """
+        TODO: Implement a back-end server for people to communicate
+        Now, we will just simulate an online environment here
+        """
+        self.text_bubble.show_text('Kevin: It is my sixth days of quitting smoking. I feel good!')
 
     def post_my_current_thought(self):
         pass
