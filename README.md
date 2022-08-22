@@ -1,4 +1,8 @@
-# Features
+# Quit Smoking Mate
+
+
+
+## Features
 
 Statistics to see:
 how many times you want to smoke and you did not
@@ -10,3 +14,9 @@ You want to leave a short message with other poeple who are also trying to quit 
 
 You want to randomly see a message from other quitter
 
+
+## References
+
+https://github.com/aphkyle/dpet
+
+https://medium.com/analytics-vidhya/create-your-own-desktop-pet-with-python-5b369be18868

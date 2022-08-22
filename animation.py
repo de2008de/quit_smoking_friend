@@ -5,6 +5,7 @@ from PIL import Image, ImageTk
 WIDTH = 150
 HEIGHT = 200
 
+
 class Animation(tk.Label):
     def __init__(self, *args, **kwargs):
         self.sprite_path = "assets\\sprites"
