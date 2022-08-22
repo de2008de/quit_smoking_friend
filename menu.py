@@ -32,10 +32,14 @@ class Menu(tk.Menu):
         TODO: Implement a back-end server for people to communicate
         Now, we will just simulate an online environment here
         """
-        self.text_bubble.show_text('Kevin: It is my sixth days of quitting smoking. I feel good!')
+        self.text_bubble.show_text('Anonymous User: It is my sixth days of quitting smoking. I feel good!')
 
     def post_my_current_thought(self):
+        self.text_bubble.show_text('Please share your thought with others!')
         pass
 
     def show_statistics(self):
-        pass
+        num_hold_back = self.data_manager.get_num_hold_back()
+        days_quit = self.data_manager.get_days_quit()
+        self.text_bubble.show_text('You hold back {} cigarettes, and quit smoking for {} days.'
+                                   .format(num_hold_back, days_quit))
