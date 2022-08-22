@@ -86,7 +86,8 @@ def get_random_event_number():
 def main():
     window.overrideredirect(True)
     window.wm_attributes("-transparentcolor", "#f0f0f0")
-    window.floater = FloatingWindow(window)
+    screen_size = (window.winfo_screenwidth(), window.winfo_screenheight())
+    window.floater = FloatingWindow(screen_size, window)
     window.after(INTERVALS[_event_number], update_animation, _cycle, _event_number, window.floater)
     window.mainloop()
 
